@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold-50: #fffcf0;
+  --color-gold-100: #fef7da;
+  --color-gold-200: #fdebad;
+  --color-gold-300: #fbd977;
+  --color-gold-400: #f9c042;
+  --color-gold-500: #f5a623;
+  --color-gold-600: #d48411;
+  --color-gold-700: #a65f0f;
+  --color-gold-800: #874c13;
+  --color-gold-900: #714014;
+  --color-gold-950: #422106;
+
+  --font-serif: "Playfair Display", "Georgia", serif;
+}
+
+@layer base {
+  body {
+    @apply bg-zinc-950 text-zinc-100 selection:bg-gold-500/30;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-zinc-900/50 border border-white/5 backdrop-blur-sm;
+  }
+  
+  .gold-gradient {
+    @apply bg-gradient-to-br from-gold-400 via-gold-600 to-gold-800;
+  }
+
+  .text-gold {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-gold-300 to-gold-600;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .glass-card {
+    border: 1px solid #ccc !important;
+    background: transparent !important;
+  }
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
