@@ -262,6 +262,28 @@ const Home = ({ onNavigate }: { onNavigate: (path: string) => void }) => {
         </div>
       </section>
 
+      {/* Foundational Verse */}
+      <section className="py-16 border-y border-white/5 bg-zinc-950/50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(113,64,20,0.05),transparent_50%)]" />
+        <div className="max-w-4xl mx-auto px-4 relative text-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="space-y-6"
+          >
+            <div className="inline-block px-4 py-1 rounded-full border border-gold-600/30 bg-gold-600/5 text-gold-500 font-bold tracking-widest uppercase text-xs mb-2">
+              Base Bíblica
+            </div>
+            <h3 className="text-gold-400 font-serif text-xl md:text-2xl font-bold">Gênesis 2:15 — Responsabilidade Original</h3>
+            <p className="text-2xl md:text-4xl font-serif italic text-zinc-100 leading-relaxed">
+              “Tomou, pois, o Senhor Deus ao homem e o colocou no jardim do Éden para o cultivar e guardar.”
+            </p>
+            <div className="w-12 h-1 bg-gold-600/30 mx-auto rounded-full mt-8" />
+          </motion.div>
+        </div>
+      </section>
+
       {/* Modelo PALAVRA 360 Section */}
       <section id="metodologia" className="py-24 bg-zinc-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
